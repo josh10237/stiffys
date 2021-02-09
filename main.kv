@@ -1,0 +1,139 @@
+<MainScreen>:
+    name: 'main'
+    FloatLayout:
+        size_hint: None, None
+
+        canvas:
+            Color:
+                rgb: 1, 1, 0
+            Rectangle:
+                pos: 0, 0
+                size: root.width /2 , root.height
+
+        Profile:
+
+        Profile2:
+
+
+        Label:
+            text: "Stiffy's Fight Night"
+            id: title
+            color: (0, 0, 0, .8)
+            x: (root.width * .5)-(self.width * .5)
+            y: root.height * 0.9
+            bold: True
+            font_size: 150
+
+        Label:
+            text: "Total Bets Placed: 2"
+            id: total
+            color: (0, 0, 0, .8)
+            x: (root.width * .5)-(self.width * .5)
+            y: root.height * 0.03
+            bold: True
+            font_size: 50
+
+        Label:
+            text: "Expected Profit: 0"
+            id: profit
+            color: (0, 0, 0, .8)
+            x: (root.width * .5)-(self.width * .5)
+            y: root.height * 0.02 - 25
+            bold: True
+            font_size: 20
+
+
+        Label:
+            text: "NA"
+            id: yellow
+            color: (0, 0, 0, .8)
+            x: (root.width * .2)-(self.width * .5)
+            y: root.height * 0.4
+            bold: True
+            font_size: 250
+
+        Label:
+            text: "NA"
+            id: blue
+            color: (0, 0, 0, .8)
+            x: (root.width * .75)-(self.width * .5)
+            y: root.height * 0.4
+            bold: True
+            font_size: 250
+
+        Label:
+            text: "NA"
+            id: yellow1
+            color: (0, 0, 0, .8)
+            x: (root.width * .2)-(self.width * .5)
+            y: root.height * 0.3 - 50
+            bold: True
+            font_size: 70
+
+        Label:
+            text: "NA"
+            id: blue1
+            color: (0, 0, 0, .8)
+            x: (root.width * .75)-(self.width * .5)
+            y: root.height * 0.3 - 50
+            bold: True
+            font_size: 70
+
+        Button:
+            id: yellow_counter
+            text: "Yellows: 1"
+            x: (root.width * .2)-150
+            y: root.height * 0.1
+            size: 300, 70
+            size_hint: None, None
+            color: 0, 0, 0, 1
+            bold: True
+            background_color: 1, 1, 1, .5
+            on_press: root.countYellow(1)
+
+        Button:
+            id: blue_counter
+            text: "Blues: 1"
+            x: (root.width * .8)-150
+            y: root.height * 0.1
+            size: 300, 70
+            size_hint: None, None
+            bold: True
+            color: 0, 0, 0, 1
+            background_color: 1, 1, 1, .5
+            on_press: root.countBlue(1)
+
+
+
+
+
+
+<Profile>:
+    BoxLayout:
+        orientation: 'vertical'
+        FloatLayout:
+            canvas:
+                Color:
+                    rgb: 1, 1, 1
+                Ellipse:
+                    size: 400 , 400
+                    pos: 400, 1100
+                    source: "babyyoda.jpeg"
+                    angle_start: 0
+                    angle_end: 360
+
+<Profile2>:
+    BoxLayout:
+        orientation: 'vertical'
+        FloatLayout:
+            canvas:
+                Color:
+                    rgb: 1, 1, 1
+                Ellipse:
+                    size: 400 , 400
+                    pos: 2000, 1100
+                    source: "babyyoda.jpeg"
+                    angle_start: 0
+                    angle_end: 360
+
+
